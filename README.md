@@ -26,7 +26,7 @@
 
 Описание развёртывания проекта
 
-Проект деплоится из ветки `deploy` по адресу https://wondrous-youtiao-73333c.netlify.app/
+Проект деплоится из ветки `deploy` по адресу https://frabjous-tapioca-b47574.netlify.app
 
 ## Links
 
