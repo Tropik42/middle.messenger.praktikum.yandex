@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tropik42/monochrome.git"
+    "url": "git+https://github.com/Tropik42/middle.messenger.praktikum.yandex.git"
   },
   "author": "vy_morozov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tropik42/monochrome/issues"
+    "url": "github.com/Tropik42/middle.messenger.praktikum.yandex.git/issues"
   },
-  "homepage": "https://github.com/Tropik42/monochrome#readme",
+  "homepage": "github.com/Tropik42/middle.messenger.praktikum.yandex.git#readme",
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "^1.0.9",
     "@parcel/transformer-sass": "^2.8.3",
