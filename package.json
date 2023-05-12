@@ -1,0 +1,29 @@
+{
+  "name": "monochrome",
+  "version": "1.0.0",
+  "description": "messenger web app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel --no-cache src/index.hbs",
+    "build": "parcel build src/index.hbs",
+    "start": "parcel build src/index.hbs && node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tropik42/middle.messenger.praktikum.yandex.git"
+  },
+  "author": "vy_morozov",
+  "license": "ISC",
+  "bugs": {
+    "url": "github.com/Tropik42/middle.messenger.praktikum.yandex.git/issues"
+  },
+  "homepage": "github.com/Tropik42/middle.messenger.praktikum.yandex.git#readme",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.9",
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
