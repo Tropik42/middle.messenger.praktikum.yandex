@@ -5,36 +5,48 @@
 .all-chats
   border: $primary-color-light solid
   width: 25%
-  height: 95vh
+  height: 93vh
   margin-left: 2%
   margin-top: 2%
+  .chat-search
+    margin-top: 3%
+    margin-left: 3%
+    input
+      display: flex
+      flex-direction: column
+      margin-top: 3%
+      width: 80%
+      background-color: $primary-color-dark
 
 .current-chat
   border: $primary-color-light solid
-  width: 68%
-  height: 95vh
+  width: 69%
+  height: 93vh
   margin-right: 2%
   margin-top: 2%
 
-.current-chat__header
+.chat-header
   display: flex
   justify-content: space-between
-
-.button-chat
-  margin-top: 1%
-  margin-left: 1%
-  margin-right: 1%
-  width: 200px
-  height: 35px
-  background: #757575
-  border-radius: 3px
-  padding-top: 5px
+  margin-top: 0.9em
+  height: 3vh
   text-align: center
   color: $primary-color-light
-  font-size: 18px
-  line-height: normal
-  text-decoration: none
-  box-sizing: border-box
-  border: 1px solid #000000
-  font-style: normal
-  font-weight: 700
+  .header-part
+    display: flex
+    background: #757575
+    border-radius: 3px
+  .logo-mini
+    margin-left: 3%
+    width: 35%
+  .btn-profile
+    margin-right: 3%
+    width: 56%
+  .contact-profile
+    margin-left: 3%
+    width: 20%
+  .contact-menu
+    margin-right: 3%
+    width: 25%
+  span
+    margin: auto
