@@ -100,6 +100,46 @@
     height: 93vh
     margin-right: 2%
     margin-top: 2%
+    .current-chat-wrapper
+        width: 95%
+        margin-left: auto
+        margin-right: auto
+        .current-chat-messages
+            margin-top: 2%
+            margin-left: auto
+            margin-right: auto
+            //border: 1px $primary-color-dark solid
+            height: 76vh
+            .current-chat-message
+                //border: 1px $primary-color-dark solid
+                background-color: #858585
+                height: 5vh
+                margin-bottom: 1%
+                width: 60%
+            .message-user
+                float: right
+            .message-contact
+                float: left
+        .send-message-wrapper
+            //border: 1px $primary-color-dark solid
+            margin-top: 1%
+            margin-left: auto
+            margin-right: auto
+            height: 8vh
+            display: flex
+            justify-content: space-between
+            input
+                display: flex
+                width: 88%
+                background-color: $primary-color-light
+                border: .3em solid $primary-color-dark
+            label
+                overflow: hidden
+                width: 8%
+                border: .3em solid $primary-color-dark
+            img
+                width: 100%
+                cursor: pointer
 
 .chat-header
     display: flex
@@ -111,7 +151,6 @@
     .header-part
         display: flex
         background-color: #757575
-        //border-radius: 3px
     .logo-mini
         margin-left: 3%
         width: 35%
@@ -120,10 +159,10 @@
         margin-right: 3%
         width: 56%
     .contact-profile
-        margin-left: 3%
+        //margin-left: 3%
         width: 20%
     .contact-menu
-        margin-right: 3%
+        //margin-right: 3%
         width: 25%
     span
         margin: auto
