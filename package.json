@@ -21,6 +21,8 @@
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "^1.0.9",
     "@parcel/transformer-sass": "^2.8.3",
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb": "^19.0.4",
     "parcel": "^2.8.3",
     "ts-node": "^10.9.1"
   },
