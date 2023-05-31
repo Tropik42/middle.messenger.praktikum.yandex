@@ -24,6 +24,7 @@
     "eslint": "^8.41.0",
     "eslint-config-airbnb": "^19.0.4",
     "parcel": "^2.8.3",
+    "stylelint": "^15.6.2",
     "ts-node": "^10.9.1"
   },
   "dependencies": {
