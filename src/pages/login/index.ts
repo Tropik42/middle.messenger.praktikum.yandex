@@ -52,7 +52,7 @@ export class Login extends Block {
         });
 
         this.children.loginBtn = new Button({
-            label: "ВОЙТИ",
+            text: "ВОЙТИ",
             add_class: "btn-big",
             type: "submit",
             events: {
@@ -70,7 +70,7 @@ export class Login extends Block {
         })
 
         this.children.regBtn = new Button({
-            label: "зарегистрироваться",
+            text: "зарегистрироваться",
             add_class: "btn-medium",
             type: "submit",
             events: {

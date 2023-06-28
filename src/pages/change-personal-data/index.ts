@@ -64,6 +64,25 @@ export class ChangeData extends Block {
             add_class: "page__input-small",
             events: {
                 blur: (e) => {
+                    const firstName = e.target.value.trim();
+                    const firstNameValid = validate(firstName,
+                        ['nameForm'])
+                    if (!firstNameValid.isValid) {
+                        console.log(firstNameValid.message)
+                    } else {
+                        console.log(`Имя - ${e.target.value}`)
+                    }
+                }
+            }
+        });
+
+        this.children.secondName = new Input({
+            type: "text",
+            name: "first_name",
+            placeholder: "фамилия",
+            add_class: "page__input-small",
+            events: {
+                blur: (e) => {
                     const secondName = e.target.value.trim();
                     const secondNameValid = validate(secondName,
                         ['nameForm'])
@@ -76,18 +95,23 @@ export class ChangeData extends Block {
             }
         });
 
-        this.children.secondName = new Input({
-            type: "text",
-            name: "first_name",
-            placeholder: "фамилия",
-            add_class: "page__input-small"
-        });
-
         this.children.phoneInput = new Input({
             type: "text",
             name: "phone",
             placeholder: "телефон",
-            add_class: "page__input-small"
+            add_class: "page__input-small",
+            events: {
+                blur: (e) => {
+                    const phone = e.target.value.trim();
+                    const phoneValid = validate(phone,
+                        ['phoneForm'])
+                    if (!phoneValid.isValid) {
+                        console.log(phoneValid.message)
+                    } else {
+                        console.log(`Телефон - ${e.target.value}`)
+                    }
+                }
+            }
         });
 
         this.children.saveBtn = new Button({
@@ -96,10 +120,18 @@ export class ChangeData extends Block {
             type: "submit",
             events: {
                 click: (e) => {
-                    e.preventDefault()
+                    e.preventDefault();
+                    const formData = {
+                        email: this.children.mailInput.element.value.trim(),
+                        login: this.children.loginInput.element.value.trim(),
+                        firstName: this.children.firstName.element.value.trim(),
+                        secondName: this.children.secondName.element.value.trim(),
+                        phone: this.children.phoneInput.element.value.trim(),
+                    };
+                    console.log(formData);
                 }
             }
-        })
+        });
 
         this.children.backBtn = new Button({
             text: "назад",

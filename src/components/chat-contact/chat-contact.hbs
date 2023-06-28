@@ -1,20 +1,20 @@
 <div class="contact">
     <div class="contact-avatar-wrapper">
         <div class="contact-avatar">
-            <img class="setting_avatar" src="../../../static/img/cat_avatar.png" alt="Аватар"/>
+            {{{avatar}}}
         </div>
     </div>
     <div class="contact-content">
         <div class="contact-content-header">
-            <div>Андрей</div>
-            <div class="contact-time-value">20:42</div>
+            <div>{{contact_name}}</div>
+            <div class="contact-time-value">{{last_message_time}}</div>
         </div>
         <div class="contact-content-body">
-            <span>Вы: как дела?</span>
+            <span>{{last_message}}</span>
         </div>
         <div class="contact-content-footer">
             <div class="message-counter">
-                <div class="message-counter-value">3</div>
+                <div class="message-counter-value">{{unread_message_count}}</div>
             </div>
         </div>
     </div>

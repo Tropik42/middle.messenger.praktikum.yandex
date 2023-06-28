@@ -1,5 +1,6 @@
 {
   "name": "monochrome",
+  "type": "module",
   "version": "1.0.0",
   "description": "messenger web app",
   "scripts": {

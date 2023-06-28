@@ -1,79 +1,38 @@
 import Block from "../../utils/Block";
 import template from './chats.hbs'
-import Input from "../../components/input";
-import Button from "../../components/button";
-import {validate} from "../../utils/validation";
+import ChatContact from "../../components/chat-contact";
+import img from "../../../static/img/cat_avatar.png";
+// import Img from "../../components/img";
+
 
 export class Chats extends Block {
     constructor() {
         const content = {
-            logo: "MONOCHROME"
+            logo: 'MONOCHROME',
+            code: '404',
+            text: 'Страница не найдена. Возможно, вы неправильно ввели адрес или страница была перемещена.',
+            link: 'Вернуться к чатам'
         }
         super(content);
     }
 
     init() {
-        this.children.loginInput = new Input({
-            type: "text",
-            name: "login",
-            placeholder: "логин",
-            add_class: "page__input-big",
-            events: {
-                blur: (e) => {
-                    const loginValue = e.target.value.trim();
-                    const loginValidate = validate(loginValue,
-                        ['req', 'minLen:3', 'maxLen:20', 'noSpaces', 'noSpecChar'])
-                    if (!loginValidate.isValid) {
-                        console.log(loginValidate.message)
-                    } else {
-                        console.log(`Логин - ${e.target.value}`)
-                    }
-                }
-            }
+        this.children.contact1 = new ChatContact({
+            contact_name: "Андрей",
+            last_message: "Пошли катацо",
+            last_message_time: "22:15",
+            unread_message_count: 3,
+            alt: "test",
+            src: img
         });
-
-        this.children.passwordInput = new Input({
-            type: "password",
-            name: "password",
-            placeholder: "пароль",
-            add_class: "page__input-big",
-            events: {
-                blur: (e) => {
-                    const passwordValue = e.target.value.trim();
-                    const passwordValidate = validate(passwordValue,
-                        ['req', 'oneUpperReq', 'oneDigitReq'])
-                    console.log(`Пароль - ${e.target.value}`)
-                    // if (!passwordValidate.isValid) {
-                    //     console.log(passwordValidate.message)
-                    // } else {
-                    //     console.log(`Пароль - ${e.target.value}`)
-                    // }
-                }
-            }
+        this.children.contact2 = new ChatContact({
+            contact_name: "Света",
+            last_message: "Доброе утро)",
+            last_message_time: "08:15",
+            unread_message_count: 2,
+            alt: "test",
+            src: img
         });
-
-        this.children.loginBtn = new Button({
-            text: "ВОЙТИ",
-            add_class: "btn-big",
-            type: "submit",
-            events: {
-                click: (e) => {
-                    e.preventDefault()
-                }
-            }
-        })
-
-        this.children.regBtn = new Button({
-            text: "зарегистрироваться",
-            add_class: "btn-medium",
-            type: "submit",
-            events: {
-                click: (e) => {
-                    e.preventDefault()
-                }
-            }
-        })
-
     }
     render() {
         return this.compile(

@@ -1,6 +1,6 @@
 import Block from "../../utils/Block";
-import img from '../../../static/img/cat_err.png'
 import Img from "../../components/img";
+import img from '../../../static/img/cat_err.png'
 import template from './error-404.hbs'
 
 export class Error404 extends Block {
@@ -28,5 +28,3 @@ export class Error404 extends Block {
 }
 
 export default Error404;
-
-

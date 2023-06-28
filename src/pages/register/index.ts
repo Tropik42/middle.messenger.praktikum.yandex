@@ -137,7 +137,7 @@ export class Register extends Block {
         });
 
         this.children.loginBtn = new Button({
-            label: "ЗАРЕГЕСТРИРОВАТЬСЯ",
+            text: "ЗАРЕГЕСТРИРОВАТЬСЯ",
             add_class: "btn-big",
             type: "submit",
             events: {
@@ -158,7 +158,7 @@ export class Register extends Block {
         });
 
         this.children.regBtn = new Button({
-            label: "войти",
+            text: "войти",
             add_class: "btn-medium",
             type: "submit",
             events: {
