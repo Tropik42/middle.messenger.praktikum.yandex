@@ -6,9 +6,9 @@ import {validate} from "../../utils/validation";
 
 export class Login extends Block {
     constructor() {
-        const content = {
-            logo: "MONOCHROME"
-        }
+          const content = {
+              logo: "MONOCHROME"
+            }
         super(content);
     }
 
@@ -22,7 +22,7 @@ export class Login extends Block {
                 blur: (e) => {
                     const loginValue = e.target.value.trim();
                     const loginValidate = validate(loginValue,
-                        ['req', 'minLen:3', 'maxLen:20', 'noSpaces', 'noSpecChar'])
+                        ['loginForm'])
                     if (!loginValidate.isValid) {
                         console.log(loginValidate.message)
                     } else {
@@ -41,30 +41,36 @@ export class Login extends Block {
                 blur: (e) => {
                     const passwordValue = e.target.value.trim();
                     const passwordValidate = validate(passwordValue,
-                        ['req', 'oneUpperReq', 'oneDigitReq'])
-                    console.log(`Пароль - ${e.target.value}`)
-                    // if (!passwordValidate.isValid) {
-                    //     console.log(passwordValidate.message)
-                    // } else {
-                    //     console.log(`Пароль - ${e.target.value}`)
-                    // }
-                }
+                        ['passwordForm'])
+                    if (!passwordValidate.isValid) {
+                        console.log(passwordValidate.message)
+                    } else {
+                        console.log(`Пароль - ${e.target.value}`)
+                    }
+        }
             }
         });
 
         this.children.loginBtn = new Button({
-            text: "ВОЙТИ",
+            label: "ВОЙТИ",
             add_class: "btn-big",
             type: "submit",
             events: {
                 click: (e) => {
-                    e.preventDefault()
+                    e.preventDefault();
+                    const loginValue = this.children.loginInput.element.value.trim();
+                    const passwordValue = this.children.passwordInput.element.value.trim();
+                    const formData = {
+                        login: loginValue,
+                        password: passwordValue
+                    };
+                    console.log(formData);
                 }
             }
         })
 
         this.children.regBtn = new Button({
-            text: "зарегистрироваться",
+            label: "зарегистрироваться",
             add_class: "btn-medium",
             type: "submit",
             events: {
