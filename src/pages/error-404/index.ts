@@ -1,7 +1,7 @@
-import Block from "../../utils/Block";
-import Img from "../../components/img";
-import img from '../../../static/img/cat_err.png'
-import template from './error-404.hbs'
+import Block from '../../utils/Block';
+import Img from '../../components/img';
+import img from '../../../static/img/cat_err.png';
+import template from './error-404.hbs';
 
 export class Error404 extends Block {
     constructor() {
@@ -9,8 +9,8 @@ export class Error404 extends Block {
             logo: 'MONOCHROME',
             code: '404',
             text: 'Страница не найдена. Возможно, вы неправильно ввели адрес или страница была перемещена.',
-            link: 'Вернуться к чатам'
-        }
+            link: 'Вернуться к чатам',
+        };
         super(content);
     }
 
@@ -22,8 +22,7 @@ export class Error404 extends Block {
     }
 
     render() {
-        return this.compile(
-            template, {...this.props})
+        return this.compile(template, {...this.props});
     }
 }
 

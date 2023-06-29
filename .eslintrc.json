@@ -1,7 +1,12 @@
 {
-  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "rules": {
     "no-unused-vars": "off",
     "import/no-extraneous-dependencies": "off",
@@ -14,7 +19,18 @@
     "import/no-unresolved": "off",
     "no-useless-constructor": "off",
     "class-methods-use-this": "off",
-    "prettier/prettier": ["error", { "tabWidth": 4 }]
+    "func-names": "off",
+    "no-console": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 4,
+        "endOfLine": "auto",
+        "object-curly-spacing": "off",
+        "bracketSpacing": false,
+        "singleQuote": true
+      }
+    ]
   },
   "env": {
     "browser": true,

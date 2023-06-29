@@ -1,6 +1,6 @@
-import { nanoid } from "nanoid";
-import { BLOCK_EVENTS, Callback, Props } from "./types.ts";
-import EventBus from "./event-bus.ts";
+import {nanoid} from 'nanoid';
+import {BLOCK_EVENTS, Callback, Props} from './types.ts';
+import EventBus from './event-bus.ts';
 
 export default abstract class Block<T extends Record<string, unknown> = any> {
     static EVENTS = BLOCK_EVENTS;
@@ -53,7 +53,7 @@ export default abstract class Block<T extends Record<string, unknown> = any> {
             }
         });
 
-        return { props: props as T, children };
+        return {props: props as T, children};
     }
 
     private registerEvents(eventBus: EventBus) {
@@ -103,32 +103,32 @@ export default abstract class Block<T extends Record<string, unknown> = any> {
     }
 
     public render(): DocumentFragment {
-        return document.createElement("template").content;
+        return document.createElement('template').content;
     }
 
     protected compile(
         template: (context: Record<string, unknown>) => string,
         context: Record<string, unknown>
     ) {
-        const contextAndStubs = { ...context };
+        const contextAndStubs = {...context};
 
         Object.entries(this.children).forEach(([name, component]) => {
             if (Array.isArray(component)) {
                 contextAndStubs[name] = component
                     .map((c) => `<div data-id=${c.id}></div>`)
-                    .join("");
+                    .join('');
             } else {
                 contextAndStubs[name] = `<div data-id=${component.id}></div>`;
             }
         });
 
         const html = template(contextAndStubs);
-        const temp = document.createElement("template");
+        const temp = document.createElement('template');
         temp.innerHTML = html;
 
         const replaceStub = (component: Block) => {
             const stub = temp.content.querySelector(
-                `[data-id="${component.id}"]`
+                `[data-id='${component.id}']`
             );
             if (!stub) {
                 return;
@@ -196,7 +196,7 @@ export default abstract class Block<T extends Record<string, unknown> = any> {
 
     getContent() {
         if (!this.element) {
-            throw new Error("No element found");
+            throw new Error('No element found');
         }
         return this.element;
     }
@@ -211,7 +211,7 @@ export default abstract class Block<T extends Record<string, unknown> = any> {
                 return true;
             },
             deleteProperty(..._) {
-                throw new Error("нет доступа");
+                throw new Error('нет доступа');
             },
         });
     }
@@ -221,10 +221,10 @@ export default abstract class Block<T extends Record<string, unknown> = any> {
     }
 
     public show() {
-        this.getContent().style.display = "block";
+        this.getContent().style.display = 'block';
     }
 
     public hide() {
-        this.getContent().style.display = "none";
+        this.getContent().style.display = 'none';
     }
 }

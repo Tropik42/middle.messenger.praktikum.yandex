@@ -1,4 +1,4 @@
-import Handlebars from "handlebars";
+import Handlebars from 'handlebars';
 
 export default function handlebars() {
     const fileRegexp = /\.hbs$|\.handlebars$/;
@@ -13,10 +13,11 @@ export default function handlebars() {
             const code = `
       import Handlebars from 'handlebars/runtime';
       export default Handlebars.template(${Handlebars.precompile(src)});
-    `
+    `;
+            // eslint-disable-next-line consistent-return
             return {
-                code
-            }
-        }
-    }
+                code,
+            };
+        },
+    };
 }

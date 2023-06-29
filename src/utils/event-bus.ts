@@ -1,4 +1,4 @@
-import { Callback, CallbackList } from "./types.ts";
+import { Callback, CallbackList } from './types.ts';
 
 export default class EventBus {
     // private listeners: { [key: string]: CallbackList };

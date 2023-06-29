@@ -1,7 +1,7 @@
-import Block from "../../utils/Block";
-import Img from "../../components/img";
-import img from '../../../static/img/cat_err.png'
-import template from "./error-500.hbs"
+import Block from '../../utils/Block';
+import Img from '../../components/img';
+import img from '../../../static/img/cat_err.png';
+import template from './error-500.hbs';
 
 export class Error500 extends Block {
     constructor() {
@@ -9,8 +9,8 @@ export class Error500 extends Block {
             logo: 'MONOCHROME',
             code: '500',
             text: 'Уже чиним',
-            link: 'Вернуться к чатам'
-        }
+            link: 'Вернуться к чатам',
+        };
         super(content);
     }
 
@@ -22,11 +22,8 @@ export class Error500 extends Block {
     }
 
     render() {
-        return this.compile(
-            template, {...this.props})
+        return this.compile(template, {...this.props});
     }
 }
 
 export default Error500;
-
-

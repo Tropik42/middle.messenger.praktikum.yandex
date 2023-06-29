@@ -1,14 +1,14 @@
 export type Callback = (...args: unknown[]) => unknown;
 export type CallbackList = Callback[];
 export enum BLOCK_EVENTS {
-    INIT = "init",
-    FLOW_CDM = "flow:component-did-mount",
-    FLOW_RENDER = "flow:render",
-    FLOW_CDU = "flow:component-did-update",
+    INIT = 'init',
+    FLOW_CDM = 'flow:component-did-mount',
+    FLOW_RENDER = 'flow:render',
+    FLOW_CDU = 'flow:component-did-update',
 }
 
 export enum STORE_EVENTS {
-    UPDATE = "update",
+    UPDATE = 'update',
 }
 
 export type Props = Record<string, unknown>;

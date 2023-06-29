@@ -1,14 +1,14 @@
-import Block from "../../utils/Block";
-import template from './chat-contact.hbs'
-import Img from "../../components/img";
+import Block from '../../utils/Block';
+import template from './chat-contact.hbs';
+import Img from '../../components/img';
 
 interface ChatContactProps {
-    contact_name: string
-    last_message_time: string
-    last_message: string
-    unread_message_count: number
-    alt: string
-    src: string
+    contact_name: string;
+    last_message_time: string;
+    last_message: string;
+    unread_message_count: number;
+    alt: string;
+    src: string;
 }
 
 export class ChatContact extends Block<ChatContactProps> {
@@ -18,13 +18,13 @@ export class ChatContact extends Block<ChatContactProps> {
 
     init() {
         this.children.avatar = new Img({
-            ...this.props
+            ...this.props,
         });
     }
 
-    render(){
-        return this.compile(template, {...this.props})
+    render() {
+        return this.compile(template, {...this.props});
     }
 }
 
-export default ChatContact
+export default ChatContact;
