@@ -3,7 +3,11 @@
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "skipLibCheck": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -16,10 +20,34 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "sourceMap": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "paths": {
+      "~components/*": [
+        "src/components/*"
+      ],
+      "~pages/*": [
+        "src/pages/*"
+      ],
+      "~typings/*": [
+        "src/typings/*"
+      ],
+      "~utils/*": [
+        "src/utils/*"
+      ],
+      "~/*": [
+        "src/*"
+      ]
+    }
   },
   "rules": {
-    "no-unused-variable": [true, {"ignore-pattern": "^_"}]
+    "no-unused-variable": [
+      true,
+      {
+        "ignore-pattern": "^_"
+      }
+    ]
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

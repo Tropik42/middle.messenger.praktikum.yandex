@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "messenger web app",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
     "start": "vite build && node server.js",
     "lint": "npm run lint:script && npm run lint:styles",
@@ -36,7 +36,11 @@
     "stylelint-config-standard": "^33.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
-    "vite-plugin-handlebars": "^1.6.0"
+    "vite-aliases": "^0.11.2",
+    "vite-plugin-handlebars": "^1.6.0",
+    "@vitejs/plugin-legacy": "^4.0.4",
+    "vite-plugin-checker": "^0.6.0",
+    "vite-plugin-stylelint": "^4.3.0"
   },
   "dependencies": {
     "handlebars": "^4.7.7",
