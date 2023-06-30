@@ -1,4 +1,4 @@
-import Block from '../../utils/Block';
+import Block from '../../utils/block';
 import Img from '../../components/img';
 import img from '../../../static/img/cat_err.png';
 import template from './error-404.hbs';
