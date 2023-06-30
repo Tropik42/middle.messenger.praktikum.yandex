@@ -6,6 +6,7 @@ import handlebarsPrecompile from './src/utils/vite-plugin-handlebars-precompile'
 export default defineConfig({
     root: resolve(__dirname, 'src'),
     build: {
+        target: 'es2017',
         outDir: resolve(__dirname, 'dist'),
         emptyOutDir: true,
     },
