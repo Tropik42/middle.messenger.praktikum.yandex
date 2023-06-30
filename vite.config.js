@@ -7,7 +7,7 @@ export default defineConfig({
     root: resolve(__dirname, 'src'),
     build: {
         target: 'es2017',
-        outDir: resolve(__dirname, 'dist'),
+        outDir: 'dist',
         emptyOutDir: true,
     },
     plugins: [handlebarsPrecompile()],
