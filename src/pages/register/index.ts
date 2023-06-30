@@ -1,4 +1,4 @@
-import Block from '../../utils/Block';
+import Block from '../../utils/block';
 import template from './register.hbs';
 import Input from '../../components/input';
 import Button from '../../components/button';

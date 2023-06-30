@@ -1,4 +1,4 @@
-import Block from '../../utils/Block.ts';
+import Block from '../../utils/block';
 import template from './login.hbs';
 import Input from '../../components/input';
 import Button from '../../components/button';
