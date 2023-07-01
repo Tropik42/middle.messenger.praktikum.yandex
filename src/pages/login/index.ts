@@ -2,7 +2,7 @@ import Block from '../../utils/block';
 import template from './login.hbs';
 import Input from '../../components/input';
 import Button from '../../components/button';
-import {validate} from '../../utils/validation';
+import {validate} from '~utils/validation';
 
 export class Login extends Block {
     constructor() {
@@ -21,12 +21,7 @@ export class Login extends Block {
             events: {
                 blur: (e) => {
                     const loginValue = e.target.value.trim();
-                    const loginValidate = validate(loginValue, ['loginForm']);
-                    if (!loginValidate.isValid) {
-                        console.log(loginValidate.message);
-                    } else {
-                        console.log(`Логин - ${e.target.value}`);
-                    }
+                    validate(loginValue, ['loginForm'], e);
                 },
             },
         });
@@ -39,14 +34,7 @@ export class Login extends Block {
             events: {
                 blur: (e) => {
                     const passwordValue = e.target.value.trim();
-                    const passwordValidate = validate(passwordValue, [
-                        'passwordForm',
-                    ]);
-                    if (!passwordValidate.isValid) {
-                        console.log(passwordValidate.message);
-                    } else {
-                        console.log(`Пароль - ${e.target.value}`);
-                    }
+                    validate(passwordValue, ['passwordForm'], e);
                 },
             },
         });
