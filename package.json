@@ -1,12 +1,17 @@
 {
   "name": "monochrome",
+  "type": "module",
   "version": "1.0.0",
   "description": "messenger web app",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel --no-cache src/index.hbs",
-    "build": "parcel build src/index.hbs",
-    "start": "parcel build src/index.hbs && node ./server.js"
+    "dev": "vite --open",
+    "build": "vite build",
+    "start": "vite build && node server.js",
+    "lint": "npm run lint:script && npm run lint:styles",
+    "lint:script": "eslint .",
+    "lint:script:fix": "eslint . --fix",
+    "lint:styles": "stylelint ./**/*.css",
+    "lint:styles:fix": "stylelint ./**/*.css --fix"
   },
   "repository": {
     "type": "git",
@@ -19,11 +24,26 @@
   },
   "homepage": "github.com/Tropik42/middle.messenger.praktikum.yandex.git#readme",
   "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "@parcel/transformer-sass": "^2.8.3",
-    "parcel": "^2.8.3"
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.22.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "express": "^4.18.2",
+    "stylelint": "^15.7.0",
+    "stylelint-config-standard": "^33.0.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vite-aliases": "^0.11.2",
+    "vite-plugin-handlebars": "^1.6.0",
+    "@vitejs/plugin-legacy": "^4.0.4",
+    "vite-plugin-checker": "^0.6.0",
+    "vite-plugin-stylelint": "^4.3.0"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "handlebars": "^4.7.7",
+    "nanoid": "^4.0.2"
   }
 }
